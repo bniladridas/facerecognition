@@ -38,6 +38,10 @@ This project aims to provide a simple and extensible face recognition solution. 
 Customize the known faces by replacing the image file in the script.
 Explore additional features and configurations in the script for advanced usage.
 
+## Preview
+
+![CV](https://github.com/niladrigithub/face-recognition-webcam/blob/main/CV.webp)
+
 ## Contributing
 
 Contributions are welcome! If you have ideas for improvements or encounter issues, feel free to open an issue or submit a pull request.
