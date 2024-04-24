@@ -1,3 +1,9 @@
+![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![Face Recognition](https://img.shields.io/badge/-Face_Recognition-FF5733?style=flat-square&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
 # Face Recognition Webcam
 
 A Python-based face recognition program using OpenCV and the face_recognition library for real-time face detection and recognition with a webcam.
