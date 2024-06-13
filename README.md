@@ -46,7 +46,7 @@ Explore additional features and configurations in the script for advanced usage.
 
 ## Preview
 
-![CV](https://github.com/niladrridas/face-recognition-webcam/blob/main/CV.webp)
+![CV](https://github.com/niladrridas/facerecognition/blob/main/CV.webp)
 
 ## Contributing
 
@@ -54,4 +54,4 @@ Contributions are welcome! If you have ideas for improvements or encounter issue
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/niladrigithub/face-recognition-webcam/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/niladrridas/facerecognition/blob/main/LICENSE) file for details.
