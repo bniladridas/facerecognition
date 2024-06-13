@@ -34,10 +34,13 @@ This project aims to provide a simple and extensible face recognition solution. 
 
 ## Usage
 
-1. Clone the repository: `git clone https://github.com/niladrridas/face-recognition-webcam.git`
-2. Navigate to the project directory: `cd face-recognition-webcam`
-3. Run the script: `python my_face_recognition.py`
-4. Look into the webcam, and the program will detect and recognize faces in real-time.
+1. Clone the repository:
+```
+git clone https://github.com/niladrridas/facerecognition.git
+```
+3. Navigate to the project directory: `cd facerecognition`
+4. Run the script: `python face_recognition_webcam.py`
+5. Look into the webcam, and the program will detect and recognize faces in real-time.
 
 ## Configuration
 
