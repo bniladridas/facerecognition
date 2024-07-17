@@ -46,7 +46,7 @@ cd facerecognition
 
 3. **Run the script:**
 ```bash
-python face_recognition_webcam.py
+python face_recognition.py
 ```
 
 4. **Use the webcam:** Point the webcam towards the desired area and the program will start detecting and recognizing faces in real-time.
