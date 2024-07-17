@@ -1,4 +1,4 @@
-## Face Recognition Webcam 
+## Face Recognition
 
 ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![Face Recognition](https://img.shields.io/badge/-Face_Recognition-FF5733?style=flat-square&logo=python&logoColor=white)
