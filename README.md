@@ -1,6 +1,6 @@
 ![Introduction](https://github.com/niladrridas/facerecognition/blob/main/face_header_sd.jpg)
 
-## Face Recognition
+## Face Recognition with OpenCV and face_recognition
 
 ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![Face Recognition](https://img.shields.io/badge/-Face_Recognition-FF5733?style=flat-square&logo=python&logoColor=white)
