@@ -1,0 +1,118 @@
+# CONTRIBUTION
+
+## Face Recognition with OpenCV and face_recognition
+
+This section demonstrates a simple real-time face recognition application using OpenCV and the `face_recognition` library. The example provided here recognizes a known person (Elon Musk) from a live webcam feed.
+
+### Code Contribution
+
+```python
+import cv2
+import face_recognition as fr
+
+# Load an image of the person you want to recognize
+known_image = fr.load_image_file("/Users/niladridas/image/elon.jpg")
+known_encoding = fr.face_encodings(known_image)[0]
+
+# Open the webcam (you may need to change the argument to 1 if you have an external camera)
+video_capture = cv2.VideoCapture(0)
+
+while True:
+    # Capture each frame from the webcam
+    ret, frame = video_capture.read()
+
+    # Find all face locations and face encodings in the current frame
+    face_locations = fr.face_locations(frame)
+    face_encodings = fr.face_encodings(frame, face_locations)
+
+    for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+        # Check if the face matches the known person
+        matches = fr.compare_faces([known_encoding], face_encoding)
+
+        name = "Unknown"
+
+        if matches[0]:
+            name = "Elon Musk"
+
+        # Draw a rectangle around the face and display the name
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
+        font = cv2.FONT_HERSHEY_DUPLEX
+        cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.5, (255, 255, 255), 1)
+
+    # Display the resulting frame
+    cv2.imshow('Video', frame)
+
+    # Break the loop when 'q' key is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Release the webcam and close all OpenCV windows
+video_capture.release()
+cv2.destroyAllWindows()
+```
+
+### Explanation
+
+1. **Import Libraries:**
+    ```python
+    import cv2
+    import face_recognition as fr
+    ```
+
+2. **Load a Known Image:**
+    ```python
+    known_image = fr.load_image_file("/Users/niladridas/image/elon.jpg")
+    known_encoding = fr.face_encodings(known_image)[0]
+    ```
+
+3. **Open the Webcam:**
+    ```python
+    video_capture = cv2.VideoCapture(0)
+    ```
+
+4. **Process Each Frame:**
+    - Capture frame from the webcam.
+    - Find face locations and encodings.
+    - Compare each face with the known encoding.
+    - Draw rectangles and names around recognized faces.
+    ```python
+    while True:
+        ret, frame = video_capture.read()
+        face_locations = fr.face_locations(frame)
+        face_encodings = fr.face_encodings(frame, face_locations)
+
+        for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+            matches = fr.compare_faces([known_encoding], face_encoding)
+            name = "Unknown"
+            if matches[0]:
+                name = "Elon Musk"
+            cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
+            font = cv2.FONT_HERSHEY_DUPLEX
+            cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.5, (255, 255, 255), 1)
+        
+        cv2.imshow('Video', frame)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    ```
+
+5. **Release Resources:**
+    ```python
+    video_capture.release()
+    cv2.destroyAllWindows()
+    ```
+
+### How to Run
+
+1. Ensure you have Python installed on your system.
+2. Install the required libraries:
+    ```bash
+    pip install opencv-python face_recognition
+    ```
+3. Save the code to a file, e.g., `face_recognition.py`.
+4. Run the script:
+    ```bash
+    python face_recognition.py
+    ```
+
+Make sure you replace the path `"/Users/niladridas/image/elon.jpg"` with the path to your own image file.
