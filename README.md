@@ -98,7 +98,7 @@ Ensure these dependencies are installed to get started:
 
 ## 🎬 Preview
 
-- Not Available Currently
+![Preview](https://raw.githubusercontent.com/niladrridas/facerecognition/refs/heads/main/preview.webp)
 
 ---
 
