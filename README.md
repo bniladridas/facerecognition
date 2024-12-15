@@ -24,6 +24,38 @@ This repository provides an extensible, user-friendly **Face Recognition** solut
 
 ---
 
+## 📊 Pipeline Workflow
+
+Our face recognition system follows a streamlined process:
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Open Webcam]
+    B --> C[Capture Video Frame]
+    C --> D[Detect Face Locations]
+    D --> E[Extract Face Encodings]
+    E --> F{Face Match?}
+    F -->|Yes| G[Identify Known Person]
+    F -->|No| H[Label as Unknown]
+    G --> I[Draw Rectangle]
+    H --> I[Draw Rectangle]
+    I --> J[Display Frame]
+    J --> K{User Quits?}
+    K -->|No| C
+    K -->|Yes| L[Close Webcam]
+    L --> M[End]
+```
+
+This diagram illustrates the key steps in our face recognition process:
+- Open the webcam and begin video capture
+- Detect face locations in each frame
+- Extract face encodings
+- Compare against known faces
+- Identify or label faces
+- Continuously update and display results
+
+---
+
 ## ⚙️ Prerequisites
 
 Ensure these dependencies are installed to get started:
@@ -44,7 +76,7 @@ Ensure these dependencies are installed to get started:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/niladrridas/facerecognition.git
+   git clone https://github.com/bniladridas/facerecognition.git
    ```
 
 2. **Navigate to the project directory:**
@@ -71,28 +103,22 @@ Ensure these dependencies are installed to get started:
 ## 🌐 Use Cases
 
 1. **Attendance System:**
-
-- Automatically mark attendance by recognizing faces of employees or students.
+   - Automatically mark attendance by recognizing faces of employees or students.
 
 2. **Security System:**
-
-- Enhance security by allowing access only to recognized individuals.
+   - Enhance security by allowing access only to recognized individuals.
 
 3. **Photo Organization:**
-
-- Automatically tag and organize photos based on recognized faces.
+   - Automatically tag and organize photos based on recognized faces.
 
 4. **Customer Analytics:**
-
-- Analyze customer demographics and behavior in retail stores.
+   - Analyze customer demographics and behavior in retail stores.
 
 5. **Personalized User Experience:**
-
-- Provide personalized content or services based on user recognition.
+   - Provide personalized content or services based on user recognition.
 
 6. **Law Enforcement:**
-
-- Assist law enforcement agencies in identifying suspects.
+   - Assist law enforcement agencies in identifying suspects.
 
 ---
 
@@ -104,4 +130,4 @@ Contributions make the magic happen! Whether you're fixing bugs, adding features
 
 ## 📝 License
 
-This project is licensed under the **MIT License**. Check the [LICENSE](https://github.com/niladrridas/facerecognition/blob/main/LICENSE) file for more details.
+This project is licensed under the **MIT License**. Check the [LICENSE](https://github.com/bniladridas/facerecognition/blob/main/LICENSE) file for more details.
