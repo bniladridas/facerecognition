@@ -96,12 +96,6 @@ Ensure these dependencies are installed to get started:
 
 ---
 
-## 🎬 Preview
-
-![Preview](https://raw.githubusercontent.com/niladrridas/facerecognition/refs/heads/main/preview.webp)
-
----
-
 ## 🤝 Contributing
 
 Contributions make the magic happen! Whether you're fixing bugs, adding features, or suggesting improvements, you're welcome to submit issues or pull requests. 
